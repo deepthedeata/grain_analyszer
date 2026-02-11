@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raice Labz • Wireframe</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-page="reports">
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logoMark" aria-hidden="true">
+          <!-- Simple APIT-ish mark as inline SVG -->
+          <svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 23L12 3L21 23H16.6L12 13.7L7.4 23H3Z" fill="#F2C300"/>
+            <path d="M24 23V3H28V23H24Z" fill="#0B4EA2"/>
+            <path d="M31 23L40 3H44L35 23H31Z" fill="#F2C300"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Raice labz</h1>
+          <small>APIT • Process • Innovation • Technology</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>›</span></a>
+        <a href="./grain.html" data-nav="grain"><span>Tell us about grain</span><span>›</span></a>
+        <a href="./live.html" data-nav="live"><span>Live Analysis</span><span>›</span></a>
+        <a href="./reports.html" data-nav="reports"><span>Reports</span><span>›</span></a>
+        <a href="./settings.html" data-nav="settings"><span>Settings</span><span>›</span></a>
+      </nav>
+
+      <p class="footerNote">Wireframe HTML/CSS pages based on Dashboard.pdf.</p>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="pageTitle">
+          <h2>Reports</h2>
+          <p>Filter by variety + report preview (page 5).</p>
+        </div>
+        <div class="user">
+          <div class="pill">Raice labz</div>
+          <div class="avatar" title="User">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z" fill="rgba(255,255,255,.92)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <section class="content">
+        
+<div class="card">
+  <h3>Reports</h3>
+  <p class="sub">“Filter By: Choose Variety” as shown in wireframe page 5. (Other filters can be added later.)</p>
+
+  <div class="grid cols-2">
+    <div class="field">
+      <label>Filter By</label>
+      <select class="select" id="varietySelect">
+        <option value="" selected disabled>Choose Variety</option>
+        <option>1121</option>
+        <option>1509</option>
+        <option>1718</option>
+        <option>1401</option>
+        <option>Sharbati</option>
+        <option>PR14</option>
+      </select>
+      
+    </div>
+
+    <div class="card" style="background: rgba(255,255,255,.08); border-style:dashed">
+      <h3 style="margin-top:0">Report preview</h3>
+      <p class="sub">Placeholder area for charts, table, and export buttons.</p>
+      <div class="row">
+        <button class="btn" type="button">Generate</button>
+        <button class="btn secondary" type="button">Export PDF</button>
+        <button class="btn secondary" type="button">Export CSV</button>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footerNote">Note in wireframe: “ONE MORE FILTER REQUIRED BASED ON VARIETY”.</p>
+</div>
+
+<div class="modal" id="modalAddVariety" aria-hidden="true">
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="mvTitle">
+    <header>
+      <h4 id="mvTitle">Add new variety</h4>
+      <button class="xbtn" data-close-modal aria-label="Close">✕</button>
+    </header>
+    <form id="addVarForm">
+      <div class="field">
+        <label>Variety name</label>
+        <input class="input" id="newVariety" placeholder="e.g., RH10 / Taj / 1121…" />
+      </div>
+      <div class="row" style="margin-top:12px; justify-content:flex-end">
+        <button class="btn secondary" type="button" data-close-modal>Cancel</button>
+        <button class="btn" type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raice Labz • Wireframe</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-page="grain">
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logoMark" aria-hidden="true">
+          <!-- Simple APIT-ish mark as inline SVG -->
+          <svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 23L12 3L21 23H16.6L12 13.7L7.4 23H3Z" fill="#F2C300"/>
+            <path d="M24 23V3H28V23H24Z" fill="#0B4EA2"/>
+            <path d="M31 23L40 3H44L35 23H31Z" fill="#F2C300"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Raice labz</h1>
+          <small>APIT • Process • Innovation • Technology</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>›</span></a>
+        <a href="./grain.html" data-nav="grain"><span>Tell us about grain</span><span>›</span></a>
+        <a href="./live.html" data-nav="live"><span>Live Analysis</span><span>›</span></a>
+        <a href="./reports.html" data-nav="reports"><span>Reports</span><span>›</span></a>
+        <a href="./settings.html" data-nav="settings"><span>Settings</span><span>›</span></a>
+      </nav>
+
+      <p class="footerNote">Wireframe HTML/CSS pages based on Dashboard.pdf.</p>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="pageTitle">
+          <h2>Tell us about grain</h2>
+          <p>Analysis type, milling series, machine and segmentation mapping (pages 2–3).</p>
+        </div>
+        <div class="user">
+          <div class="pill">Raice labz</div>
+          <div class="avatar" title="User">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z" fill="rgba(255,255,255,.92)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <section class="content">
+        
+<div class="split">
+  <div class="card">
+    <h3>Tell us about grain</h3>
+    <p class="sub">Inputs based on the wireframe: Analysis type, Milling series, Machine, Paddy/Rice.</p>
+
+    <div class="grid cols-2">
+      <div class="field">
+        <label>Analysis type</label>
+        <select class="select" id="analysisType">
+          <option value="" selected disabled>Select…</option>
+          <option>Procurement</option>
+          <option>Production</option>
+          <option>TMA</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Choose milling series</label>
+        <select class="select">
+          <option value="" selected disabled>Select…</option>
+          <option>8tph</option>
+          <option>10tph</option>
+          <option>12tph</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Choose Machine</label>
+        <select class="select">
+          <option value="" selected disabled>Select…</option>
+          <option>Husker</option>
+          <option>Whitener 1</option>
+          <option>Whitener 2</option>
+          <option>Silky Polisher</option>
+        </select>
+      </div>
+
+      <div class="field" id="materialField">
+        <label>Material (Procurement only)</label>
+        <select class="select">
+          <option value="" selected disabled>Select…</option>
+          <option>Paddy</option>
+          <option>Rice</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="height:12px"></div>
+    <div class="row">
+      <a class="btn" href="./live.html">Go</a>
+      <a class="btn secondary" href="./dashboard.html">Back</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Notes (from wireframe)</h3>
+    <p class="sub">
+      • “Analysis type at the first is required.”<br/>
+      • “Segmentation only we need for basmati.”<br/>
+      • Process type examples: Golden Sella, White Sella.
+    </p>
+
+    <div class="field">
+      <label>Process type (mandatory)</label>
+      <select class="select" id="processType" required>
+        <option value="" selected disabled>Select…</option>
+        <option>Golden Sella</option>
+        <option>White Sella</option>
+        <option>Lemon Sella</option>
+        <option>Cream Steam</option>
+        <option>White Steam</option>
+        <option>Raw</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Chalky set point</label>
+      <input class="input" type="range" min="0" max="100" value="55" oninput="document.getElementById('csp').textContent=this.value" />
+      <div class="row"><span class="badge">Value: <span id="csp">55</span></span><span class="badge">Wireframe slider</span></div>
+    </div>
+  </div>
+</div>
+
+<div style="height:14px"></div>
+
+<div class="card">
+  <h3>Segmentation → Head rice / Brokens mapping</h3>
+  <p class="sub">Replicates the simple mapping table shown in wireframe page 3 (radio-like selection).</p>
+
+  <div style="overflow:auto">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:42%">Segmentation class</th>
+          <th style="width:29%">Head rice</th>
+          <th style="width:29%">Brokens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Second one</td><td><input type="radio" name="m1"></td><td><input type="radio" name="m1"></td></tr>
+        <tr><td>Tibar</td><td><input type="radio" name="m2"></td><td><input type="radio" name="m2" checked></td></tr>
+        <tr><td>Dubar</td><td><input type="radio" name="m3"></td><td><input type="radio" name="m3" checked></td></tr>
+        <tr><td>Mini Mongra</td><td><input type="radio" name="m4"></td><td><input type="radio" name="m4" checked></td></tr>
+        <tr><td>Mongra</td><td><input type="radio" name="m5"></td><td><input type="radio" name="m5" checked></td></tr>
+        <tr><td>Nakku</td><td><input type="radio" name="m6"></td><td><input type="radio" name="m6" checked></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
