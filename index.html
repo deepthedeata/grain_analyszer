@@ -1,1 +1,126 @@
-<!doctype html><html><head><meta http-equiv="refresh" content="0; url=./dashboard.html"/></head><body></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raice labz • Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">APIT</div>
+        <div class="title-pill">Raice labz</div>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Profile">
+          <span>👤</span>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="index.html" data-nav="dashboard"><span>Dashboard</span><small>Overview</small></a>
+        <a href="grain.html" data-nav="grain"><span>Tell us about grain</span><small>Setup</small></a>
+        <a href="live.html" data-nav="live"><span>Live Analysis</span><small>Run</small></a>
+        <a href="reports.html" data-nav="reports"><span>Reports</span><small>Exports</small></a>
+        <a href="settings.html" data-nav="settings"><span>Settings</span><small>Config</small></a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="section-title">Executive Summary</div>
+      <section class="grid kpis">
+        <div class="card white kpi">
+          <div>
+            <div class="label">Total number of grains analyzed</div>
+            <div class="value">1 Billion</div>
+          </div>
+          <div class="badge">LIVE</div>
+        </div>
+        <div class="card white kpi">
+          <div>
+            <div class="label">Total varieties analyzed</div>
+            <div class="value">83</div>
+          </div>
+          <div class="badge">DB</div>
+        </div>
+        <div class="card white kpi">
+          <div>
+            <div class="label">Total samples analyzed</div>
+            <div class="value">8328</div>
+          </div>
+          <div class="badge">QC</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="card visual">
+          <div class="bg" aria-hidden="true"></div>
+          <div class="overlay">
+            <div class="pill"><div>
+              <div class="sub">Whiteness Index</div>
+              <div style="font-size:20px;font-weight:900;">32.1</div>
+            </div></div>
+
+            <div class="stack" style="grid-row:1 / span 2; grid-column:2;">
+              <div id="headBtn" class="pill action" role="button" tabindex="0" aria-describedby="headHover">Head rice</div>
+              <div id="brokensBtn" class="pill action" role="button" tabindex="0" aria-describedby="brokensHover">Brokens</div>
+              <div class="pill action" role="button" tabindex="0">Chalky</div>
+              <div id="rejectBtn" class="pill action" role="button" tabindex="0" aria-describedby="rejectHover">Reject</div>
+            </div>
+
+            <div class="pill"><div>
+              <div class="sub">Variety</div>
+              <div style="font-size:20px;font-weight:900;">Basmati</div>
+            </div></div>
+
+            <div></div>
+          </div>
+        </div>
+
+        <div class="hover-stack">
+          <div id="headHover" class="card hover-box" aria-live="polite">
+            <div class="hover-title">On hovering: Head rice</div>
+            <div class="hover-hint">Head rice split</div>
+            <ul class="hover-list">
+              <li>Head rice (%)</li>
+              <li>Second one (%)</li>
+            </ul>
+          </div>
+
+          <div id="brokensHover" class="card hover-box" aria-live="polite">
+            <div class="hover-title">On hovering: Brokens</div>
+            <div class="hover-hint">Broken sub-classes (%)</div>
+            <ul class="hover-list">
+              <li>Tibar (2%)</li>
+              <li>Dubar (1%)</li>
+              <li>Mongra (3%)</li>
+              <li>Mini mongra (4%)</li>
+              <li>Nakku (90%)</li>
+            </ul>
+          </div>
+
+          <div id="rejectHover" class="card hover-box" aria-live="polite">
+            <div class="hover-title">On hovering: Reject</div>
+            <div class="hover-hint">Reject split (%)</div>
+            <ul class="hover-list">
+              <li>Discolored (%)</li>
+              <li>Type 1 (%)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div style="margin-top:18px; display:flex; gap:12px; align-items:center;">
+        <a class="btn" href="grain.html">Start New Analysis Setup →</a>
+        <a class="btn secondary" href="reports.html">View Reports</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

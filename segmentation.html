@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raice labz • Segmentation</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="grain">
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">APIT</div>
+        <div class="title-pill">Raice labz</div>
+      </div>
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Profile"><span>👤</span></button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav class="nav">
+        <a href="index.html" data-nav="dashboard"><span>Dashboard</span><small>Overview</small></a>
+        <a href="grain.html" data-nav="grain"><span>Tell us about grain</span><small>Setup</small></a>
+        <a href="live.html" data-nav="live"><span>Live Analysis</span><small>Run</small></a>
+        <a href="reports.html" data-nav="reports"><span>Reports</span><small>Exports</small></a>
+        <a href="settings.html" data-nav="settings"><span>Settings</span><small>Config</small></a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <div class="section-title">Segmentation configuration (North Region only)</div>
+
+      <div class="card">
+        <table class="table" aria-label="Segmentation mapping">
+          <thead>
+            <tr>
+              <th style="width:34%">Class</th>
+              <th style="width:33%">Head rice</th>
+              <th style="width:33%">Brokens</th>
+              <th style="width:12%">Action</th>
+            </tr>
+          </thead>
+          <tbody id="segmentationBody">
+            <tr>
+              <td class="seg-class">Second one</td>
+              <td><input type="radio" name="second" value="head" aria-label="Second one → Head rice" /></td>
+              <td><input type="radio" name="second" value="broken" aria-label="Second one → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Second one">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Tibar</td>
+              <td><input type="radio" name="tibar" value="head" aria-label="Tibar → Head rice" /></td>
+              <td><input type="radio" name="tibar" value="broken" aria-label="Tibar → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Tibar">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Dubar</td>
+              <td><input type="radio" name="dubar" value="head" aria-label="Dubar → Head rice" /></td>
+              <td><input type="radio" name="dubar" value="broken" aria-label="Dubar → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Dubar">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Monimongra</td>
+              <td><input type="radio" name="monimongra" value="head" aria-label="Monimongra → Head rice" /></td>
+              <td><input type="radio" name="monimongra" value="broken" aria-label="Monimongra → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Monimongra">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Mongra</td>
+              <td><input type="radio" name="mongra" value="head" aria-label="Mongra → Head rice" /></td>
+              <td><input type="radio" name="mongra" value="broken" aria-label="Mongra → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Mongra">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Nakku</td>
+              <td><input type="radio" name="nakku" value="head" aria-label="Nakku → Head rice" /></td>
+              <td><input type="radio" name="nakku" value="broken" aria-label="Nakku → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Nakku">✖</button></td>
+            </tr>
+            <tr>
+              <td class="seg-class">Tips</td>
+              <td><input type="radio" name="tips" value="head" aria-label="Tips → Head rice" /></td>
+              <td><input type="radio" name="tips" value="broken" aria-label="Tips → Brokens" /></td>
+              <td class="seg-actions"><button class="row-del" type="button" aria-label="Delete Tips">✖</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="seg-toolbar" style="margin-top:12px; display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+          <button id="addSegRow" class="btn secondary" type="button">+ Add classification</button>
+          <div class="hint" style="opacity:.9; font-weight:800;">Tip: Delete is available per row (North region only).</div>
+        </div>
+
+        <div class="notice" style="margin-top:14px;">
+          Notes (from PDF): Remove GMAD & Nutritional properties here. Per-grain weight is not required.
+        </div>
+
+        <div style="margin-top:16px; display:flex; justify-content:flex-end; gap:10px;">
+          <a class="btn secondary" href="grain.html">← Back</a>
+          <button class="btn js-save" type="button">Save & Continue</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

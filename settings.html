@@ -3,151 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Raice Labz • Wireframe</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Raice labz • Settings</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body data-page="settings">
-  <div class="container">
-    <aside class="sidebar">
+  <div class="app">
+    <header class="header">
       <div class="brand">
-        <div class="logoMark" aria-hidden="true">
-          <!-- Simple APIT-ish mark as inline SVG -->
-          <svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 23L12 3L21 23H16.6L12 13.7L7.4 23H3Z" fill="#F2C300"/>
-            <path d="M24 23V3H28V23H24Z" fill="#0B4EA2"/>
-            <path d="M31 23L40 3H44L35 23H31Z" fill="#F2C300"/>
-          </svg>
-        </div>
-        <div>
-          <h1>Raice labz</h1>
-          <small>APIT • Process • Innovation • Technology</small>
-        </div>
+        <div class="logo">APIT</div>
+        <div class="title-pill">Raice labz</div>
       </div>
+      <div class="header-right">
+        <button class="icon-btn" aria-label="Profile"><span>👤</span></button>
+      </div>
+    </header>
 
+    <aside class="sidebar">
       <nav class="nav">
-        <a href="./dashboard.html" data-nav="dashboard"><span>Dashboard</span><span>›</span></a>
-        <a href="./grain.html" data-nav="grain"><span>Tell us about grain</span><span>›</span></a>
-        <a href="./live.html" data-nav="live"><span>Live Analysis</span><span>›</span></a>
-        <a href="./reports.html" data-nav="reports"><span>Reports</span><span>›</span></a>
-        <a href="./settings.html" data-nav="settings"><span>Settings</span><span>›</span></a>
+        <a href="index.html" data-nav="dashboard"><span>Dashboard</span><small>Overview</small></a>
+        <a href="grain.html" data-nav="grain"><span>Tell us about grain</span><small>Setup</small></a>
+        <a href="live.html" data-nav="live"><span>Live Analysis</span><small>Run</small></a>
+        <a href="reports.html" data-nav="reports"><span>Reports</span><small>Exports</small></a>
+        <a href="settings.html" data-nav="settings"><span>Settings</span><small>Config</small></a>
       </nav>
-
-      <p class="footerNote">Wireframe HTML/CSS pages based on Dashboard.pdf.</p>
     </aside>
 
     <main class="main">
-      <div class="topbar">
-        <div class="pageTitle">
-          <h2>Settings</h2>
-          <p>Class dimensions + whiteness index ranges + series/machine (page 6).</p>
+      <div class="section-title">Settings</div>
+
+      <div class="grid" style="grid-template-columns: 1.2fr .8fr;">
+        <div class="card">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+            <div style="font-weight:900;">Classification size rules (mm)</div>
+            <button id="addRowClass" class="btn secondary" type="button" data-target="#tbodyClass">+ Add row</button>
+          </div>
+          <div style="margin-top:12px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Classification</th>
+                  <th>Length (mm)</th>
+                  <th>Breadth (mm)</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyClass">
+                <tr>
+                  <td>Dubar</td>
+                  <td>l*0.7</td>
+                  <td>b*1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:18px;">
+            <div style="font-weight:900;">Whiteness Index Range (Process)</div>
+            <button id="addRowWI" class="btn secondary" type="button" data-target="#tbodyWI">+ Add row</button>
+          </div>
+          <div style="margin-top:12px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Color / Process</th>
+                  <th>W.I Min</th>
+                  <th>W.I Max</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyWI">
+                <tr>
+                  <td>Golden</td>
+                  <td>38</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:18px;">
+            <div style="font-weight:900;">Milling series → Machine mapping</div>
+            <button id="addRowMap" class="btn secondary" type="button" data-target="#tbodyMap">+ Add row</button>
+          </div>
+          <div style="margin-top:12px;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Milling series</th>
+                  <th>Machine</th>
+                </tr>
+              </thead>
+              <tbody id="tbodyMap">
+                <tr>
+                  <td>8 TPH</td>
+                  <td>Husker</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:16px;">
+            <button class="btn js-save" type="button">Save and continue</button>
+          </div>
         </div>
-        <div class="user">
-          <div class="pill">Raice labz</div>
-          <div class="avatar" title="User">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5Z" fill="rgba(255,255,255,.92)"/>
-            </svg>
+
+        <div class="card">
+          <div style="font-weight:900;">Miller details</div>
+          <div style="margin-top:12px; display:grid; gap:12px;">
+            <div>
+              <label style="display:block; font-size:12px; font-weight:900; opacity:.85; letter-spacing:.8px; text-transform:uppercase; margin-bottom:8px;">Rice mill name</label>
+              <input class="input" placeholder="e.g., GRM Foods Pvt Ltd" />
+            </div>
+            <div>
+              <label style="display:block; font-size:12px; font-weight:900; opacity:.85; letter-spacing:.8px; text-transform:uppercase; margin-bottom:8px;">Address</label>
+              <input class="input" placeholder="City, State" />
+            </div>
+            <div class="notice">
+              Keep other changes as-is (as mentioned in PDF).
+            </div>
           </div>
         </div>
       </div>
 
-      <section class="content">
-        
-<div class="grid">
-  <div class="card">
-    <h3>Classification → Length & Breadth (mm)</h3>
-    <p class="sub">As shown in wireframe page 6 (example: Dubar l*0.7, b*1). Click “+ Add row” to insert more classes.</p>
-
-    <div style="overflow:auto">
-      <table class="table" id="classTable">
-        <thead>
-          <tr>
-            <th>Classification</th>
-            <th>length (mm)</th>
-            <th>breadth (mm)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dubar</td>
-            <td>l*0.7</td>
-            <td>b*1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row" style="margin-top:12px">
-      <button class="btn secondary" type="button" id="addClassRow">+ Add row</button>
-      <button class="btn" type="button">Save</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Color → Whiteness Index Range</h3>
-    <p class="sub">As per wireframe: Color, W.I MIN, W.I MAX (example: Golden 38 …). Add rows for Golden/White/Lemon/Cream.</p>
-
-    <div style="overflow:auto">
-      <table class="table" id="colorTable">
-        <thead>
-          <tr>
-            <th>Color</th>
-            <th>W.I MIN</th>
-            <th>W.I MAX</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Golden</td>
-            <td>38</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row" style="margin-top:12px">
-      <button class="btn secondary" type="button" id="addColorRow">+ Add row</button>
-      <button class="btn" type="button">Save</button>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Milling Series → Machine</h3>
-    <p class="sub">As shown in wireframe page 6 (example: 8tph / Husker).</p>
-
-    <div class="grid cols-2">
-      <div class="field">
-        <label>Milling Series</label>
-        <select class="select">
-          <option selected>8tph</option>
-          <option>10tph</option>
-          <option>12tph</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Machine</label>
-        <select class="select">
-          <option selected>Husker</option>
-          <option>Whitener 1</option>
-          <option>Whitener 2</option>
-          <option>Silky Polisher</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top:12px">
-      <button class="btn" type="button">Save</button>
-      <span class="badge">Keep other changes as it is</span>
-    </div>
-  </div>
-</div>
-
-      </section>
     </main>
   </div>
 
-  <script src="./app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

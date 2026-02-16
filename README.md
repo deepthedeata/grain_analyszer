@@ -1,21 +1,21 @@
-# Raice Labz – Wireframe HTML/CSS
-
-This is a static (frontend-only) wireframe implementation based on `Dashboard.pdf`.
+# Raice labz – UI Wireframe (HTML/CSS/JS)
 
 ## Pages
-- dashboard.html
-- grain.html (Tell us about grain + segmentation mapping)
-- live.html (Live analysis placeholder + simulated metrics)
-- reports.html (Filter by variety + Add variety modal)
-- settings.html (Class dimensions + W.I range + milling series/machine)
+- `index.html` – Dashboard (with Brokens hover → Tibar/Dubar/Mongra/Mini Mongra/Nakku)
+- `grain.html` – Tell us about grain (dynamic blocks by analysis type + region)
+- `segmentation.html` – Segmentation config (North region only)
+- `live.html` – Live Analysis (weight vs count basis + moisture only for procurement)
+- `reports.html` – Reports with filters (includes Variety filter)
+- `settings.html` – Settings tables with add-row buttons
 
 ## Run
-Open `index.html` in your browser, or use a local server:
+Open `index.html` directly in browser OR use a simple local server:
 
-### Python
+```bash
+# Python
 python -m http.server 8000
+# then open http://localhost:8000
+```
 
-Then open: http://localhost:8000/
-
-### Node (optional)
-npx serve
+## Notes
+This is a front-end wireframe/demo only (no backend). Hook APIs later for real data.
